@@ -37,11 +37,11 @@ expression = ""
 txtExpression = StringVar() # Create an instance of the text field
 
 # Designing the layout of the calculator
-txtFrame = Frame( win, width = 400, height = 50, bd = 0, highlightbackground = "black", highlightcolor= "black", highlightthickness= = 1 )
+txtFrame = Frame( win, width = 400, height = 50, bd = 0, highlightbackground = "black", highlightcolor = "black", highlightthickness = 1 )
 txtFrame.pack( side = TOP )
 
 # Setting the input field for calculator and aligning it to the right
-txtField = Entry( txtFrame, font = ( 'arial', 18, bold ), textvariable = txtExpression, width = 50, bg = "#eee" , bd = 0, justify = RIGHT )
+txtField = Entry( txtFrame, font = ( 'arial', 18, 'bold' ), textvariable = txtExpression, width = 50, bg = "#eee" , bd = 0, justify = RIGHT )
 txtField.grid(row = 0, column = 0 ) # Setting it to the very first row and column
 txtField.pack( ipady = 10 ) # ipady increases te height for us by the number we set
 
@@ -66,7 +66,7 @@ btnEight.grid( row = 1, column = 1, padx = 1, pady = 1 )
 btnNine = Button( btnsFrame, text = "9", fg = "black", width = 10, height = 3, bg = "#fff", cursor = "hand2", comand = lambda: btnClick( 9 ) )
 btnNine.grid( row = 1, column = 3, padx = 1, pady = 1 )
 
-btnMultiply = Button( btnsFrame, text = "*", fg = "black", width = 10, height = 3, bg = "#eee", cursor = "hand2", comand = lambda: btnClick( * ) )
+btnMultiply = Button( btnsFrame, text = "*", fg = "black", width = 10, height = 3, bg = "#eee", cursor = "hand2", comand = lambda: btnClick( "*" ) )
 btnMultiply.grid( row = 1, column = 3, padx = 1, pady = 1 )
 
 # Setting the 4, 5, 6, and - buttons on the third row
@@ -89,7 +89,7 @@ btnOne.grid( row = 3, column = 0, padx = 1, pady = 1 )
 btnTwo = Button( btnsFrame, text = "2", fg = "black", width = 10, height = 3, bg = "#fff", cursor = "hand2", comand = lambda: btnClick( 2 ) )
 btnTwo.grid( row = 3, column = 1, padx = 1, pady = 1 )
 
-btnThreee = Button( btnsFrame, text = "3", fg = "black", width = 10, height = 3, bg = "#fff", cursor = "hand2", comand = lambda: btnClick( 3 ) )
+btnThree = Button( btnsFrame, text = "3", fg = "black", width = 10, height = 3, bg = "#fff", cursor = "hand2", comand = lambda: btnClick( 3 ) )
 btnThree.grid( row = 3, column = 2, padx = 1, pady = 1 )
 
 btnMinus = Button( btnsFrame, text = "*", fg = "black", width = 10, height = 3, bg = "#eee", cursor = "hand2", comand = lambda: btnClick( "+" ) )
@@ -105,4 +105,4 @@ btnDot.grid( row = 4, column = 2, padx = 1, pady = 1 )
 btnEqual = Button( btnsFrame, text = "=", fg = "black", width = 10, height = 3, bg = "#eee", cursor = "hand2", comand = lambda: btnClick( "=" ) )
 btnEqual.grid( row = 4, column = 3, padx = 1, pady = 1 )
 
-Win.mainloop() # Calling up our loop
+win.mainloop() # Calling up our loop
